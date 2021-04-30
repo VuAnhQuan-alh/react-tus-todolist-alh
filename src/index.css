@@ -18,6 +18,8 @@ body {
   width: 100%;
   min-height: 100vh;
   background: #e5e5e5;
+  color: #464646;
+  font-weight: 500;
 }
 .app {
   width: 400px;
@@ -43,11 +45,20 @@ form input, form button {
   background: transparent;
   box-shadow: inset -5px -5px 5px #fff5, inset 5px 5px 5px #0002;
 }
+form input {
+  padding: 0 10px;
+  color: #464646;
+  font-weight: 500;
+  border-radius: 4px;
+}
 form button {
   width: 80px;
   margin-left: 15px;
   letter-spacing: 2px;
   cursor: pointer;
+  font-size: 14px;
+  color: teal;
+  font-weight: 600;
   box-shadow: -5px -5px 5px #fff5, 5px 5px 5px #0002;
 }
 h1 {
@@ -65,8 +76,45 @@ ul li {
   text-transform: capitalize;
   box-shadow: -5px -5px 5px #fff7, 5px 5px 5px #0002;
   animation: opacity 0.2s linear;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  color: teal;
+  margin: 0 5px;
+}
+svg:hover {
+  color: crimson;
+}
+.active {
+  animation: delete 0.3s linear;
+}
+li input {
+  padding: 6px 8px;
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  color: #464646;
+  width: 70%;
+  box-shadow: inset -4px -4px 4px #fff7, inset 4px 4px 4px #0002;
 }
 
+@keyframes delete {
+  to {
+    opacity: 0;
+    transform: rotate(15deg) skew(25deg) scale(0.5);
+  }
+}
 @keyframes opacity {
   from {
     opacity: 0;
